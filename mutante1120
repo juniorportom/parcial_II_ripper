@@ -1,0 +1,474 @@
+
+ 2018, Universidad de los Andes
+ The Software Design Lab
+
+https://thesoftwaredesignlab.github.io/
+
+????????????????????????   ????????  ????????????????????????
+????????     ????????  ????????  ????????     ????????
+????????     ????????  ????????  ????????     ????????
+????????????????????????   ????????  ???????????????????????? 
+????????   ????????    ????????  ????????          
+????????    ????????   ????????  ????????          
+????????     ????????  ????????  ????????          
+ 
+-> CHECKING ANDROID VERSION
+[adb, shell, getprop, ro.build.version.release]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHECKING ANDROID VERSION ; PARAMETERS[adb, shell, getprop, ro.build.version.release]
+
+-> INSTALLING APK
+[adb, install, -r, ./apk/parcial2/com.evancharlton.mileage-mutant1120/com.evancharlton.mileage_3110-aligned-debugSigned.apk]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: INSTALLING APK ; PARAMETERS[adb, install, -r, ./apk/parcial2/com.evancharlton.mileage-mutant1120/com.evancharlton.mileage_3110-aligned-debugSigned.apk]
+
+COMMAND:INSTALL APP; PARAMETERS ./apk/parcial2/com.evancharlton.mileage-mutant1120/com.evancharlton.mileage_3110-aligned-debugSigned.apk
+
+-> GETTING PACKAGE NAME
+[/Users/juniorportom/Library/Android/sdk/build-tools/28.0.3/aapt, dump, badging, ./apk/parcial2/com.evancharlton.mileage-mutant1120/com.evancharlton.mileage_3110-aligned-debugSigned.apk]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING PACKAGE NAME ; PARAMETERS[/Users/juniorportom/Library/Android/sdk/build-tools/28.0.3/aapt, dump, badging, ./apk/parcial2/com.evancharlton.mileage-mutant1120/com.evancharlton.mileage_3110-aligned-debugSigned.apk]
+
+-> GETTING MAIN ACTIVITY
+[/Users/juniorportom/Library/Android/sdk/build-tools/28.0.3/aapt, dump, badging, ./apk/parcial2/com.evancharlton.mileage-mutant1120/com.evancharlton.mileage_3110-aligned-debugSigned.apk]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING MAIN ACTIVITY ; PARAMETERS[/Users/juniorportom/Library/Android/sdk/build-tools/28.0.3/aapt, dump, badging, ./apk/parcial2/com.evancharlton.mileage-mutant1120/com.evancharlton.mileage_3110-aligned-debugSigned.apk]
+
+-> START ACTIVITY
+[adb, shell, am, start, -n, com.evancharlton.mileage/com.evancharlton.mileage.Mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: START ACTIVITY ; PARAMETERS[adb, shell, am, start, -n, com.evancharlton.mileage/com.evancharlton.mileage.Mileage]
+
+1 - 2 - GUI_CLICK_BUTTON
+2 - 1 - GUI_INPUT_TEXT
+1 - 1 - GUI_INPUT_TEXT
+1 - 1 - GUI_CLICK_BUTTON
+1 - 3 - GUI_CLICK_BUTTON
+3 - 1 - GUI_CLICK_BUTTON
+1 - 4 - GUI_INPUT_TEXT
+4 - 2 - GUI_CLICK_BUTTON
+2 - 2 - GUI_CLICK_BUTTON
+2 - 2 - GUI_CLICK_BUTTON
+2 - 4 - GUI_INPUT_TEXT
+4 - 1 - GUI_INPUT_TEXT
+1 - 4 - GUI_INPUT_TEXT
+4 - 4 - GUI_CLICK_BUTTON
+4 - 3 - GUI_CLICK_BUTTON
+3 - 4 - GUI_CLICK_BUTTON
+4 - 4 - GUI_INPUT_TEXT
+4 - 4 - GUI_INPUT_TEXT
+4 - 4 - GUI_INPUT_TEXT
+4 - 5 - GUI_CLICK_BUTTON
+5 - 6 - GUI_CLICK_BUTTON
+6 - 7 - SCROLL
+7 - 8 - SCROLL
+8 - 5 - GUI_CLICK_BUTTON
+5 - 9 - GUI_CLICK_BUTTON
+9 - 5 - GUI_CLICK_BUTTON
+5 - 4 - GUI_CLICK_BUTTON
+4 - 6 - GUI_CLICK_BUTTON
+6 - 5 - GUI_CLICK_BUTTON
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/1.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/1.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/1.png, ./output_mutante_1120//1.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/1.png, ./output_mutante_1120//1.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output_mutante_1120//1.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output_mutante_1120//1.xml]
+
+Current ST: 1
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> SHOW BATTERY LEVEL
+[adb, shell, dumpsys, battery, |, grep, level]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW BATTERY LEVEL ; PARAMETERS[adb, shell, dumpsys, battery, |, grep, level]
+
+-> CHEKING IF WIFI IS ENABLED
+[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF WIFI IS ENABLED ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+WIFI: true
+-> SHOW CPU USAGE
+[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW CPU USAGE ; PARAMETERS[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+CPU: 4.5
+-> SHOW MEMORY USAGE
+[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW MEMORY USAGE ; PARAMETERS[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+MEM: 36193.0
+-> CHEKING IF AIRPLANE MODE IS ON
+[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF AIRPLANE MODE IS ON ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+AIR: false
+1
+1: 1 - 2 - GUI_CLICK_BUTTON
+2: 2 - 1 - GUI_INPUT_TEXT
+3: 1 - 1 - GUI_INPUT_TEXT
+4: 1 - 1 - GUI_CLICK_BUTTON
+5: 1 - 3 - GUI_CLICK_BUTTON
+6: 3 - 1 - GUI_CLICK_BUTTON
+7: 1 - 4 - GUI_INPUT_TEXT
+8: 4 - 2 - GUI_CLICK_BUTTON
+9: 2 - 2 - GUI_CLICK_BUTTON
+10: 2 - 2 - GUI_CLICK_BUTTON
+11: 2 - 4 - GUI_INPUT_TEXT
+12: 4 - 1 - GUI_INPUT_TEXT
+13: 1 - 4 - GUI_INPUT_TEXT
+14: 4 - 4 - GUI_CLICK_BUTTON
+15: 4 - 3 - GUI_CLICK_BUTTON
+16: 3 - 4 - GUI_CLICK_BUTTON
+17: 4 - 4 - GUI_INPUT_TEXT
+18: 4 - 4 - GUI_INPUT_TEXT
+19: 4 - 4 - GUI_INPUT_TEXT
+20: 4 - 5 - GUI_CLICK_BUTTON
+21: 5 - 6 - GUI_CLICK_BUTTON
+22: 6 - 7 - SCROLL
+23: 7 - 8 - SCROLL
+24: 8 - 5 - GUI_CLICK_BUTTON
+25: 5 - 9 - GUI_CLICK_BUTTON
+26: 9 - 5 - GUI_CLICK_BUTTON
+27: 5 - 4 - GUI_CLICK_BUTTON
+28: 4 - 6 - GUI_CLICK_BUTTON
+29: 6 - 5 - GUI_CLICK_BUTTON
+-> TAP
+[adb, shell, input, tap, 540, 1704]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 540, 1704]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/2.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/2.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/2.png, ./output_mutante_1120//2.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/2.png, ./output_mutante_1120//2.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output_mutante_1120//2.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output_mutante_1120//2.xml]
+
+Current ST: 2
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> SHOW BATTERY LEVEL
+[adb, shell, dumpsys, battery, |, grep, level]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW BATTERY LEVEL ; PARAMETERS[adb, shell, dumpsys, battery, |, grep, level]
+
+-> CHEKING IF WIFI IS ENABLED
+[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF WIFI IS ENABLED ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+WIFI: true
+-> SHOW CPU USAGE
+[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW CPU USAGE ; PARAMETERS[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+CPU: 0.0
+-> SHOW MEMORY USAGE
+[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW MEMORY USAGE ; PARAMETERS[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+MEM: 37797.0
+-> CHEKING IF AIRPLANE MODE IS ON
+[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF AIRPLANE MODE IS ON ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+AIR: false
+2
+1: 2 - 1 - GUI_INPUT_TEXT
+2: 1 - 1 - GUI_INPUT_TEXT
+3: 1 - 1 - GUI_CLICK_BUTTON
+4: 1 - 3 - GUI_CLICK_BUTTON
+5: 3 - 1 - GUI_CLICK_BUTTON
+6: 1 - 4 - GUI_INPUT_TEXT
+7: 4 - 2 - GUI_CLICK_BUTTON
+8: 2 - 2 - GUI_CLICK_BUTTON
+9: 2 - 2 - GUI_CLICK_BUTTON
+10: 2 - 4 - GUI_INPUT_TEXT
+11: 4 - 1 - GUI_INPUT_TEXT
+12: 1 - 4 - GUI_INPUT_TEXT
+13: 4 - 4 - GUI_CLICK_BUTTON
+14: 4 - 3 - GUI_CLICK_BUTTON
+15: 3 - 4 - GUI_CLICK_BUTTON
+16: 4 - 4 - GUI_INPUT_TEXT
+17: 4 - 4 - GUI_INPUT_TEXT
+18: 4 - 4 - GUI_INPUT_TEXT
+19: 4 - 5 - GUI_CLICK_BUTTON
+20: 5 - 6 - GUI_CLICK_BUTTON
+21: 6 - 7 - SCROLL
+22: 7 - 8 - SCROLL
+23: 8 - 5 - GUI_CLICK_BUTTON
+24: 5 - 9 - GUI_CLICK_BUTTON
+25: 9 - 5 - GUI_CLICK_BUTTON
+26: 5 - 4 - GUI_CLICK_BUTTON
+27: 4 - 6 - GUI_CLICK_BUTTON
+28: 6 - 5 - GUI_CLICK_BUTTON
+-> TAP
+[adb, shell, input, tap, 540, 928]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 540, 928]
+
+-> CHEKING IF KEYBOARD IS SHOWN
+[adb, shell, dumpsys, input_method, |, grep, -A1, 'mCurrentTextBoxAttribute']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF KEYBOARD IS SHOWN ; PARAMETERS[adb, shell, dumpsys, input_method, |, grep, -A1, 'mCurrentTextBoxAttribute']
+
+-> INPUT TEXT
+[adb, shell, input, text, Dtq]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: INPUT TEXT ; PARAMETERS[adb, shell, input, text, Dtq]
+
+-> GO BACK
+[adb, shell, input, keyevent, 4]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GO BACK ; PARAMETERS[adb, shell, input, keyevent, 4]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> CHEKING DEVICE DIMENSIONS
+[adb, shell, wm, size]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING DEVICE DIMENSIONS ; PARAMETERS[adb, shell, wm, size]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/3.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/3.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/3.png, ./output_mutante_1120//3.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/3.png, ./output_mutante_1120//3.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output_mutante_1120//3.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output_mutante_1120//3.xml]
+
+Current ST: 3
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> SHOW BATTERY LEVEL
+[adb, shell, dumpsys, battery, |, grep, level]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW BATTERY LEVEL ; PARAMETERS[adb, shell, dumpsys, battery, |, grep, level]
+
+-> CHEKING IF WIFI IS ENABLED
+[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF WIFI IS ENABLED ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+WIFI: true
+-> SHOW CPU USAGE
+[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW CPU USAGE ; PARAMETERS[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+CPU: 1.8
+-> SHOW MEMORY USAGE
+[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW MEMORY USAGE ; PARAMETERS[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+MEM: 38129.0
+-> CHEKING IF AIRPLANE MODE IS ON
+[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF AIRPLANE MODE IS ON ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+AIR: false
+3
+1: 1 - 1 - GUI_INPUT_TEXT
+2: 1 - 1 - GUI_CLICK_BUTTON
+3: 1 - 3 - GUI_CLICK_BUTTON
+4: 3 - 1 - GUI_CLICK_BUTTON
+5: 1 - 4 - GUI_INPUT_TEXT
+6: 4 - 2 - GUI_CLICK_BUTTON
+7: 2 - 2 - GUI_CLICK_BUTTON
+8: 2 - 2 - GUI_CLICK_BUTTON
+9: 2 - 4 - GUI_INPUT_TEXT
+10: 4 - 1 - GUI_INPUT_TEXT
+11: 1 - 4 - GUI_INPUT_TEXT
+12: 4 - 4 - GUI_CLICK_BUTTON
+13: 4 - 3 - GUI_CLICK_BUTTON
+14: 3 - 4 - GUI_CLICK_BUTTON
+15: 4 - 4 - GUI_INPUT_TEXT
+16: 4 - 4 - GUI_INPUT_TEXT
+17: 4 - 4 - GUI_INPUT_TEXT
+18: 4 - 5 - GUI_CLICK_BUTTON
+19: 5 - 6 - GUI_CLICK_BUTTON
+20: 6 - 7 - SCROLL
+21: 7 - 8 - SCROLL
+22: 8 - 5 - GUI_CLICK_BUTTON
+23: 5 - 9 - GUI_CLICK_BUTTON
+24: 9 - 5 - GUI_CLICK_BUTTON
+25: 5 - 4 - GUI_CLICK_BUTTON
+26: 4 - 6 - GUI_CLICK_BUTTON
+27: 6 - 5 - GUI_CLICK_BUTTON
+1 - 3
+-> CHEKING DEVICE DIMENSIONS
+[adb, shell, wm, size]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING DEVICE DIMENSIONS ; PARAMETERS[adb, shell, wm, size]
+
+-> CHECKING ANDROID VERSION
+[adb, shell, getprop, ro.build.version.release]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHECKING ANDROID VERSION ; PARAMETERS[adb, shell, getprop, ro.build.version.release]
+
+-> GET DEVICE RESOLUTION
+[adb, shell, wm, density]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GET DEVICE RESOLUTION ; PARAMETERS[adb, shell, wm, density]
+
+480
+-> GET CURRENT ORIENTATION
+[adb, shell, dumpsys, input, |, grep, 'SurfaceOrientation']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GET CURRENT ORIENTATION ; PARAMETERS[adb, shell, dumpsys, input, |, grep, 'SurfaceOrientation']
+
+For input string: " 0
+"
+-> CHEKING DEVICE DIMENSIONS
+[adb, shell, wm, size]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING DEVICE DIMENSIONS ; PARAMETERS[adb, shell, wm, size]
+
+EXPLORATION FINISHED, 3 states discovered, 0 events executed, in 0 minutes

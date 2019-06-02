@@ -1,0 +1,9 @@
+COMMAND: CHECKING ANDROID VERSION ; PARAMETERS[adb, shell, getprop, ro.build.version.release]
+COMMAND: INSTALLING APK ; PARAMETERS[adb, install, -r, ./apk/parcial2/com.evancharlton.mileage-mutant1407/com.evancharlton.mileage_3110-aligned-debugSigned.apk]
+ERROR INSTALL APPCOMMAND:INSTALL APP; PARAMETERS./apk/parcial2/com.evancharlton.mileage-mutant1407/com.evancharlton.mileage_3110-aligned-debugSigned.apk
+COMMAND: GETTING PACKAGE NAME ; PARAMETERS[/Users/juniorportom/Library/Android/sdk/build-tools/28.0.3/aapt, dump, badging, ./apk/parcial2/com.evancharlton.mileage-mutant1407/com.evancharlton.mileage_3110-aligned-debugSigned.apk]
+COMMAND: GETTING MAIN ACTIVITY ; PARAMETERS[/Users/juniorportom/Library/Android/sdk/build-tools/28.0.3/aapt, dump, badging, ./apk/parcial2/com.evancharlton.mileage-mutant1407/com.evancharlton.mileage_3110-aligned-debugSigned.apk]
+COMMAND: START ACTIVITY ; PARAMETERS[adb, shell, am, start, -n, com.evancharlton.mileage/com.evancharlton.mileage.Mileage]
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']

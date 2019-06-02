@@ -1,0 +1,2790 @@
+
+ 2018, Universidad de los Andes
+ The Software Design Lab
+
+https://thesoftwaredesignlab.github.io/
+
+????????????????????????   ????????  ????????????????????????
+????????     ????????  ????????  ????????     ????????
+????????     ????????  ????????  ????????     ????????
+????????????????????????   ????????  ???????????????????????? 
+????????   ????????    ????????  ????????          
+????????    ????????   ????????  ????????          
+????????     ????????  ????????  ????????          
+ 
+-> CHECKING ANDROID VERSION
+[adb, shell, getprop, ro.build.version.release]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHECKING ANDROID VERSION ; PARAMETERS[adb, shell, getprop, ro.build.version.release]
+
+-> INSTALLING APK
+[adb, install, -r, ./apk/com.evancharlton.mileage_3110.apk]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: INSTALLING APK ; PARAMETERS[adb, install, -r, ./apk/com.evancharlton.mileage_3110.apk]
+
+COMMAND:INSTALL APP; PARAMETERS ./apk/com.evancharlton.mileage_3110.apk
+
+-> GETTING PACKAGE NAME
+[/Users/juniorportom/Library/Android/sdk/build-tools/28.0.3/aapt, dump, badging, ./apk/com.evancharlton.mileage_3110.apk]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING PACKAGE NAME ; PARAMETERS[/Users/juniorportom/Library/Android/sdk/build-tools/28.0.3/aapt, dump, badging, ./apk/com.evancharlton.mileage_3110.apk]
+
+-> GETTING MAIN ACTIVITY
+[/Users/juniorportom/Library/Android/sdk/build-tools/28.0.3/aapt, dump, badging, ./apk/com.evancharlton.mileage_3110.apk]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING MAIN ACTIVITY ; PARAMETERS[/Users/juniorportom/Library/Android/sdk/build-tools/28.0.3/aapt, dump, badging, ./apk/com.evancharlton.mileage_3110.apk]
+
+-> START ACTIVITY
+[adb, shell, am, start, -n, com.evancharlton.mileage/com.evancharlton.mileage.Mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: START ACTIVITY ; PARAMETERS[adb, shell, am, start, -n, com.evancharlton.mileage/com.evancharlton.mileage.Mileage]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/1.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/1.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/1.png, ./output//1.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/1.png, ./output//1.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//1.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//1.xml]
+
+Current ST: 1
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> SHOW BATTERY LEVEL
+[adb, shell, dumpsys, battery, |, grep, level]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW BATTERY LEVEL ; PARAMETERS[adb, shell, dumpsys, battery, |, grep, level]
+
+-> CHEKING IF WIFI IS ENABLED
+[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF WIFI IS ENABLED ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+WIFI: true
+-> SHOW CPU USAGE
+[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW CPU USAGE ; PARAMETERS[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+CPU: 6.0
+-> SHOW MEMORY USAGE
+[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW MEMORY USAGE ; PARAMETERS[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+MEM: 38587.0
+-> CHEKING IF AIRPLANE MODE IS ON
+[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF AIRPLANE MODE IS ON ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+AIR: false
+-> TAP
+[adb, shell, input, tap, 540, 1704]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 540, 1704]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/2.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/2.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/2.png, ./output//2.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/2.png, ./output//2.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//2.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//2.xml]
+
+Current ST: 2
+96.0 1
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> SHOW BATTERY LEVEL
+[adb, shell, dumpsys, battery, |, grep, level]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW BATTERY LEVEL ; PARAMETERS[adb, shell, dumpsys, battery, |, grep, level]
+
+-> CHEKING IF WIFI IS ENABLED
+[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF WIFI IS ENABLED ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+WIFI: true
+-> SHOW CPU USAGE
+[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW CPU USAGE ; PARAMETERS[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+CPU: 0.0
+-> SHOW MEMORY USAGE
+[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW MEMORY USAGE ; PARAMETERS[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+MEM: 40103.0
+-> CHEKING IF AIRPLANE MODE IS ON
+[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF AIRPLANE MODE IS ON ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+AIR: false
+-> TAP
+[adb, shell, input, tap, 540, 1704]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 540, 1704]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> TAP
+[adb, shell, input, tap, 540, 928]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 540, 928]
+
+-> CHEKING IF KEYBOARD IS SHOWN
+[adb, shell, dumpsys, input_method, |, grep, -A1, 'mCurrentTextBoxAttribute']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF KEYBOARD IS SHOWN ; PARAMETERS[adb, shell, dumpsys, input_method, |, grep, -A1, 'mCurrentTextBoxAttribute']
+
+-> INPUT TEXT
+[adb, shell, input, text, Ujd]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: INPUT TEXT ; PARAMETERS[adb, shell, input, text, Ujd]
+
+-> GO BACK
+[adb, shell, input, keyevent, 4]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GO BACK ; PARAMETERS[adb, shell, input, keyevent, 4]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> CHEKING DEVICE DIMENSIONS
+[adb, shell, wm, size]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING DEVICE DIMENSIONS ; PARAMETERS[adb, shell, wm, size]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/3.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/3.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/3.png, ./output//3.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/3.png, ./output//3.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//3.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//3.xml]
+
+Current ST: 3
+94.0 2
+98.0 1
+Same!
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+com.evancharlton.mileage/com.evancharlton.mileage.Mileage
+
+false
+-> TAP
+[adb, shell, input, tap, 540, 928]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 540, 928]
+
+-> CHEKING IF KEYBOARD IS SHOWN
+[adb, shell, dumpsys, input_method, |, grep, -A1, 'mCurrentTextBoxAttribute']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF KEYBOARD IS SHOWN ; PARAMETERS[adb, shell, dumpsys, input_method, |, grep, -A1, 'mCurrentTextBoxAttribute']
+
+-> INPUT TEXT
+[adb, shell, input, text, Hac]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: INPUT TEXT ; PARAMETERS[adb, shell, input, text, Hac]
+
+-> GO BACK
+[adb, shell, input, keyevent, 4]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GO BACK ; PARAMETERS[adb, shell, input, keyevent, 4]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> CHEKING DEVICE DIMENSIONS
+[adb, shell, wm, size]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING DEVICE DIMENSIONS ; PARAMETERS[adb, shell, wm, size]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/3.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/3.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/3.png, ./output//3.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/3.png, ./output//3.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//3.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//3.xml]
+
+Current ST: 3
+94.0 2
+99.0 1
+Same!
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+com.evancharlton.mileage/com.evancharlton.mileage.Mileage
+
+false
+-> TAP
+[adb, shell, input, tap, 540, 710]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 540, 710]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/3.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/3.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/3.png, ./output//3.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/3.png, ./output//3.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//3.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//3.xml]
+
+Current ST: 3
+94.0 2
+99.0 1
+Same!
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+com.evancharlton.mileage/com.evancharlton.mileage.Mileage
+
+false
+-> TAP
+[adb, shell, input, tap, 810, 568]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 810, 568]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/3.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/3.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/3.png, ./output//3.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/3.png, ./output//3.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//3.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//3.xml]
+
+Current ST: 3
+55.0 2
+56.0 1
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> SHOW BATTERY LEVEL
+[adb, shell, dumpsys, battery, |, grep, level]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW BATTERY LEVEL ; PARAMETERS[adb, shell, dumpsys, battery, |, grep, level]
+
+-> CHEKING IF WIFI IS ENABLED
+[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF WIFI IS ENABLED ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+WIFI: true
+-> SHOW CPU USAGE
+[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW CPU USAGE ; PARAMETERS[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+CPU: 1.9
+-> SHOW MEMORY USAGE
+[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW MEMORY USAGE ; PARAMETERS[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+MEM: 62898.0
+-> CHEKING IF AIRPLANE MODE IS ON
+[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF AIRPLANE MODE IS ON ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+AIR: false
+-> TAP
+[adb, shell, input, tap, 780, 1145]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 780, 1145]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/4.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/4.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/4.png, ./output//4.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/4.png, ./output//4.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//4.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//4.xml]
+
+Current ST: 4
+56.0 3
+94.0 2
+100.0 1
+Same!
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+com.evancharlton.mileage/com.evancharlton.mileage.Mileage
+
+false
+-> TAP
+[adb, shell, input, tap, 270, 566]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 270, 566]
+
+-> CHEKING IF KEYBOARD IS SHOWN
+[adb, shell, dumpsys, input_method, |, grep, -A1, 'mCurrentTextBoxAttribute']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF KEYBOARD IS SHOWN ; PARAMETERS[adb, shell, dumpsys, input_method, |, grep, -A1, 'mCurrentTextBoxAttribute']
+
+-> INPUT TEXT
+[adb, shell, input, text, 84]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: INPUT TEXT ; PARAMETERS[adb, shell, input, text, 84]
+
+-> GO BACK
+[adb, shell, input, keyevent, 4]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GO BACK ; PARAMETERS[adb, shell, input, keyevent, 4]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> CHEKING DEVICE DIMENSIONS
+[adb, shell, wm, size]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING DEVICE DIMENSIONS ; PARAMETERS[adb, shell, wm, size]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/4.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/4.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/4.png, ./output//4.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/4.png, ./output//4.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//4.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//4.xml]
+
+Current ST: 4
+56.0 3
+95.0 2
+97.0 1
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> SHOW BATTERY LEVEL
+[adb, shell, dumpsys, battery, |, grep, level]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW BATTERY LEVEL ; PARAMETERS[adb, shell, dumpsys, battery, |, grep, level]
+
+-> CHEKING IF WIFI IS ENABLED
+[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF WIFI IS ENABLED ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+WIFI: true
+-> SHOW CPU USAGE
+[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW CPU USAGE ; PARAMETERS[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+CPU: 4.9
+-> SHOW MEMORY USAGE
+[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW MEMORY USAGE ; PARAMETERS[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+MEM: 52507.0
+-> CHEKING IF AIRPLANE MODE IS ON
+[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF AIRPLANE MODE IS ON ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+AIR: false
+-> TAP
+[adb, shell, input, tap, 540, 1704]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 540, 1704]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/5.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/5.png, ./output//5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/5.png, ./output//5.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+Current ST: 5
+95.0 4
+56.0 3
+99.0 2
+Same!
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+com.evancharlton.mileage/com.evancharlton.mileage.Mileage
+
+false
+-> TAP
+[adb, shell, input, tap, 540, 710]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 540, 710]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/5.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/5.png, ./output//5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/5.png, ./output//5.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+Current ST: 5
+95.0 4
+56.0 3
+99.0 2
+Same!
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+com.evancharlton.mileage/com.evancharlton.mileage.Mileage
+
+false
+-> TAP
+[adb, shell, input, tap, 810, 568]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 810, 568]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/5.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/5.png, ./output//5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/5.png, ./output//5.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+Current ST: 5
+95.0 4
+56.0 3
+100.0 2
+Same!
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+com.evancharlton.mileage/com.evancharlton.mileage.Mileage
+
+false
+-> TAP
+[adb, shell, input, tap, 270, 566]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 270, 566]
+
+-> CHEKING IF KEYBOARD IS SHOWN
+[adb, shell, dumpsys, input_method, |, grep, -A1, 'mCurrentTextBoxAttribute']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF KEYBOARD IS SHOWN ; PARAMETERS[adb, shell, dumpsys, input_method, |, grep, -A1, 'mCurrentTextBoxAttribute']
+
+-> INPUT TEXT
+[adb, shell, input, text, 61]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: INPUT TEXT ; PARAMETERS[adb, shell, input, text, 61]
+
+-> GO BACK
+[adb, shell, input, keyevent, 4]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GO BACK ; PARAMETERS[adb, shell, input, keyevent, 4]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> CHEKING DEVICE DIMENSIONS
+[adb, shell, wm, size]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING DEVICE DIMENSIONS ; PARAMETERS[adb, shell, wm, size]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/5.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/5.png, ./output//5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/5.png, ./output//5.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+Current ST: 5
+99.0 4
+Same!
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+com.evancharlton.mileage/com.evancharlton.mileage.Mileage
+
+false
+-> TAP
+[adb, shell, input, tap, 540, 928]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 540, 928]
+
+-> CHEKING IF KEYBOARD IS SHOWN
+[adb, shell, dumpsys, input_method, |, grep, -A1, 'mCurrentTextBoxAttribute']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF KEYBOARD IS SHOWN ; PARAMETERS[adb, shell, dumpsys, input_method, |, grep, -A1, 'mCurrentTextBoxAttribute']
+
+-> INPUT TEXT
+[adb, shell, input, text, Ncd]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: INPUT TEXT ; PARAMETERS[adb, shell, input, text, Ncd]
+
+-> GO BACK
+[adb, shell, input, keyevent, 4]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GO BACK ; PARAMETERS[adb, shell, input, keyevent, 4]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> CHEKING DEVICE DIMENSIONS
+[adb, shell, wm, size]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING DEVICE DIMENSIONS ; PARAMETERS[adb, shell, wm, size]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/5.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/5.png, ./output//5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/5.png, ./output//5.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+Current ST: 5
+97.0 4
+56.0 3
+94.0 2
+99.0 1
+Same!
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+com.evancharlton.mileage/com.evancharlton.mileage.Mileage
+
+false
+-> TAP
+[adb, shell, input, tap, 810, 422]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 810, 422]
+
+-> CHEKING IF KEYBOARD IS SHOWN
+[adb, shell, dumpsys, input_method, |, grep, -A1, 'mCurrentTextBoxAttribute']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF KEYBOARD IS SHOWN ; PARAMETERS[adb, shell, dumpsys, input_method, |, grep, -A1, 'mCurrentTextBoxAttribute']
+
+-> INPUT TEXT
+[adb, shell, input, text, 32]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: INPUT TEXT ; PARAMETERS[adb, shell, input, text, 32]
+
+-> GO BACK
+[adb, shell, input, keyevent, 4]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GO BACK ; PARAMETERS[adb, shell, input, keyevent, 4]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> CHEKING DEVICE DIMENSIONS
+[adb, shell, wm, size]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING DEVICE DIMENSIONS ; PARAMETERS[adb, shell, wm, size]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/5.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/5.png, ./output//5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/5.png, ./output//5.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+Current ST: 5
+98.0 4
+Same!
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+com.evancharlton.mileage/com.evancharlton.mileage.Mileage
+
+false
+-> TAP
+[adb, shell, input, tap, 540, 710]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 540, 710]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/5.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/5.png, ./output//5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/5.png, ./output//5.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+Current ST: 5
+99.0 4
+Same!
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+com.evancharlton.mileage/com.evancharlton.mileage.Mileage
+
+false
+-> TAP
+[adb, shell, input, tap, 810, 568]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 810, 568]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+State Already Exists
+-> TAP
+[adb, shell, input, tap, 306, 1145]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 306, 1145]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/5.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/5.png, ./output//5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/5.png, ./output//5.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+Current ST: 5
+100.0 4
+Same!
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+com.evancharlton.mileage/com.evancharlton.mileage.Mileage
+
+false
+-> TAP
+[adb, shell, input, tap, 270, 566]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 270, 566]
+
+-> CHEKING IF KEYBOARD IS SHOWN
+[adb, shell, dumpsys, input_method, |, grep, -A1, 'mCurrentTextBoxAttribute']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF KEYBOARD IS SHOWN ; PARAMETERS[adb, shell, dumpsys, input_method, |, grep, -A1, 'mCurrentTextBoxAttribute']
+
+-> INPUT TEXT
+[adb, shell, input, text, 17]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: INPUT TEXT ; PARAMETERS[adb, shell, input, text, 17]
+
+-> GO BACK
+[adb, shell, input, keyevent, 4]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GO BACK ; PARAMETERS[adb, shell, input, keyevent, 4]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> CHEKING DEVICE DIMENSIONS
+[adb, shell, wm, size]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING DEVICE DIMENSIONS ; PARAMETERS[adb, shell, wm, size]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/5.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/5.png, ./output//5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/5.png, ./output//5.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+Current ST: 5
+98.0 4
+Same!
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+com.evancharlton.mileage/com.evancharlton.mileage.Mileage
+
+false
+-> TAP
+[adb, shell, input, tap, 810, 422]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 810, 422]
+
+-> CHEKING IF KEYBOARD IS SHOWN
+[adb, shell, dumpsys, input_method, |, grep, -A1, 'mCurrentTextBoxAttribute']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF KEYBOARD IS SHOWN ; PARAMETERS[adb, shell, dumpsys, input_method, |, grep, -A1, 'mCurrentTextBoxAttribute']
+
+-> INPUT TEXT
+[adb, shell, input, text, 0]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: INPUT TEXT ; PARAMETERS[adb, shell, input, text, 0]
+
+-> GO BACK
+[adb, shell, input, keyevent, 4]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GO BACK ; PARAMETERS[adb, shell, input, keyevent, 4]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> CHEKING DEVICE DIMENSIONS
+[adb, shell, wm, size]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING DEVICE DIMENSIONS ; PARAMETERS[adb, shell, wm, size]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/5.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/5.png, ./output//5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/5.png, ./output//5.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+Current ST: 5
+98.0 4
+Same!
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+com.evancharlton.mileage/com.evancharlton.mileage.Mileage
+
+false
+-> TAP
+[adb, shell, input, tap, 270, 422]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 270, 422]
+
+-> CHEKING IF KEYBOARD IS SHOWN
+[adb, shell, dumpsys, input_method, |, grep, -A1, 'mCurrentTextBoxAttribute']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF KEYBOARD IS SHOWN ; PARAMETERS[adb, shell, dumpsys, input_method, |, grep, -A1, 'mCurrentTextBoxAttribute']
+
+-> INPUT TEXT
+[adb, shell, input, text, 46]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: INPUT TEXT ; PARAMETERS[adb, shell, input, text, 46]
+
+-> GO BACK
+[adb, shell, input, keyevent, 4]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GO BACK ; PARAMETERS[adb, shell, input, keyevent, 4]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> CHEKING DEVICE DIMENSIONS
+[adb, shell, wm, size]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING DEVICE DIMENSIONS ; PARAMETERS[adb, shell, wm, size]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/5.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/5.png, ./output//5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/5.png, ./output//5.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+Current ST: 5
+98.0 4
+Same!
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+com.evancharlton.mileage/com.evancharlton.mileage.Mileage
+
+false
+-> TAP
+[adb, shell, input, tap, 939, 180]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 939, 180]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/5.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/5.png, ./output//5.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/5.png, ./output//5.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//5.xml]
+
+Current ST: 5
+70.0 4
+56.0 3
+70.0 2
+70.0 1
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> SHOW BATTERY LEVEL
+[adb, shell, dumpsys, battery, |, grep, level]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW BATTERY LEVEL ; PARAMETERS[adb, shell, dumpsys, battery, |, grep, level]
+
+-> CHEKING IF WIFI IS ENABLED
+[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF WIFI IS ENABLED ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+WIFI: true
+-> SHOW CPU USAGE
+[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW CPU USAGE ; PARAMETERS[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+CPU: 3.1
+-> SHOW MEMORY USAGE
+[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW MEMORY USAGE ; PARAMETERS[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+MEM: 57950.0
+-> CHEKING IF AIRPLANE MODE IS ON
+[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF AIRPLANE MODE IS ON ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+AIR: false
+-> TAP
+[adb, shell, input, tap, 939, 180]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 939, 180]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> TAP
+[adb, shell, input, tap, 673, 180]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 673, 180]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/6.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/6.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/6.png, ./output//6.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/6.png, ./output//6.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//6.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//6.xml]
+
+Current ST: 6
+79.0 5
+66.0 4
+51.0 3
+66.0 2
+66.0 1
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> SHOW BATTERY LEVEL
+[adb, shell, dumpsys, battery, |, grep, level]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW BATTERY LEVEL ; PARAMETERS[adb, shell, dumpsys, battery, |, grep, level]
+
+-> CHEKING IF WIFI IS ENABLED
+[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF WIFI IS ENABLED ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+WIFI: true
+-> SHOW CPU USAGE
+[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW CPU USAGE ; PARAMETERS[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+CPU: 3.7
+-> SHOW MEMORY USAGE
+[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW MEMORY USAGE ; PARAMETERS[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+MEM: 51793.0
+-> CHEKING IF AIRPLANE MODE IS ON
+[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF AIRPLANE MODE IS ON ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+AIR: false
+-> SCROLL
+[adb, shell, input, swipe, 720, 1184, 720, 276, 1000]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SCROLL ; PARAMETERS[adb, shell, input, swipe, 720, 1184, 720, 276, 1000]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/7.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/7.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/7.png, ./output//7.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/7.png, ./output//7.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//7.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//7.xml]
+
+Current ST: 7
+76.0 6
+80.0 5
+63.0 4
+52.0 3
+62.0 2
+63.0 1
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> SHOW BATTERY LEVEL
+[adb, shell, dumpsys, battery, |, grep, level]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW BATTERY LEVEL ; PARAMETERS[adb, shell, dumpsys, battery, |, grep, level]
+
+-> CHEKING IF WIFI IS ENABLED
+[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF WIFI IS ENABLED ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+WIFI: true
+-> SHOW CPU USAGE
+[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW CPU USAGE ; PARAMETERS[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+CPU: 2.7
+-> SHOW MEMORY USAGE
+[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW MEMORY USAGE ; PARAMETERS[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+MEM: 54807.0
+-> CHEKING IF AIRPLANE MODE IS ON
+[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF AIRPLANE MODE IS ON ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+AIR: false
+-> SCROLL
+[adb, shell, input, swipe, 720, 1184, 720, 276, 1000]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SCROLL ; PARAMETERS[adb, shell, input, swipe, 720, 1184, 720, 276, 1000]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/8.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/8.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/8.png, ./output//8.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/8.png, ./output//8.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//8.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//8.xml]
+
+Current ST: 8
+74.0 7
+71.0 6
+80.0 5
+61.0 4
+51.0 3
+61.0 2
+61.0 1
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> SHOW BATTERY LEVEL
+[adb, shell, dumpsys, battery, |, grep, level]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW BATTERY LEVEL ; PARAMETERS[adb, shell, dumpsys, battery, |, grep, level]
+
+-> CHEKING IF WIFI IS ENABLED
+[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF WIFI IS ENABLED ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+WIFI: true
+-> SHOW CPU USAGE
+[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW CPU USAGE ; PARAMETERS[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+CPU: 6.8
+-> SHOW MEMORY USAGE
+[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW MEMORY USAGE ; PARAMETERS[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+MEM: 54558.0
+-> CHEKING IF AIRPLANE MODE IS ON
+[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF AIRPLANE MODE IS ON ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+AIR: false
+-> SCROLL
+[adb, shell, input, swipe, 720, 1184, 720, 276, 1000]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SCROLL ; PARAMETERS[adb, shell, input, swipe, 720, 1184, 720, 276, 1000]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> TAP
+[adb, shell, input, tap, 939, 180]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 939, 180]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+State Already Exists
+-> TAP
+[adb, shell, input, tap, 405, 180]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 405, 180]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/9.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/9.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/9.png, ./output//9.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/9.png, ./output//9.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//9.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//9.xml]
+
+Current ST: 9
+81.0 8
+80.0 7
+80.0 6
+95.0 5
+70.0 4
+56.0 3
+70.0 2
+70.0 1
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> SHOW BATTERY LEVEL
+[adb, shell, dumpsys, battery, |, grep, level]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW BATTERY LEVEL ; PARAMETERS[adb, shell, dumpsys, battery, |, grep, level]
+
+-> CHEKING IF WIFI IS ENABLED
+[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF WIFI IS ENABLED ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'Wi-Fi is']
+
+WIFI: true
+-> SHOW CPU USAGE
+[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW CPU USAGE ; PARAMETERS[adb, shell, dumpsys, cpuinfo, |, grep, com.evancharlton.mileage]
+
+CPU: 5.9
+-> SHOW MEMORY USAGE
+[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: SHOW MEMORY USAGE ; PARAMETERS[adb, shell, dumpsys, meminfo, |, grep, com.evancharlton.mileage]
+
+MEM: 63148.0
+-> CHEKING IF AIRPLANE MODE IS ON
+[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING IF AIRPLANE MODE IS ON ; PARAMETERS[adb, shell, dumpsys, wifi, |, grep, 'mAirplaneModeOn']
+
+AIR: false
+-> TAP
+[adb, shell, input, tap, 939, 180]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 939, 180]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+State Already Exists
+-> TAP
+[adb, shell, input, tap, 140, 180]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 140, 180]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/10.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/10.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/10.png, ./output//10.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/10.png, ./output//10.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//10.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//10.xml]
+
+Current ST: 10
+70.0 9
+61.0 8
+63.0 7
+66.0 6
+70.0 5
+99.0 4
+Same!
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+com.evancharlton.mileage/com.evancharlton.mileage.Mileage
+
+false
+-> TAP
+[adb, shell, input, tap, 673, 180]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 673, 180]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+State Already Exists
+-> TAP
+[adb, shell, input, tap, 939, 180]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAP ; PARAMETERS[adb, shell, input, tap, 939, 180]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+State Already Exists
+-> GO BACK
+[adb, shell, input, keyevent, 4]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GO BACK ; PARAMETERS[adb, shell, input, keyevent, 4]
+
+waiting for emulator's event idle state
+Emulator now is in event idle state
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> CHEKING DEVICE DIMENSIONS
+[adb, shell, wm, size]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING DEVICE DIMENSIONS ; PARAMETERS[adb, shell, wm, size]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> READ XML SNAPSHOT
+[adb, shell, cat, /sdcard/window_dump.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: READ XML SNAPSHOT ; PARAMETERS[adb, shell, cat, /sdcard/window_dump.xml]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+-> TAKE SCREENSHOT
+[adb, shell, screencap, /sdcard/10.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE SCREENSHOT ; PARAMETERS[adb, shell, screencap, /sdcard/10.png]
+
+-> PULL FILE
+[adb, pull, /sdcard/10.png, ./output//10.png]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/10.png, ./output//10.png]
+
+-> TAKE XML SNAPSHOT
+[adb, shell, uiautomator, dump]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: TAKE XML SNAPSHOT ; PARAMETERS[adb, shell, uiautomator, dump]
+
+-> PULL FILE
+[adb, pull, /sdcard/window_dump.xml, ./output//10.xml]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: PULL FILE ; PARAMETERS[adb, pull, /sdcard/window_dump.xml, ./output//10.xml]
+
+Current ST: 10
+25.0 9
+25.0 8
+25.0 7
+25.0 6
+25.0 5
+25.0 4
+25.0 3
+25.0 2
+25.0 1
+pacName: com.evancharlton.mileage
+packageName: com.evancharlton.mileage
+Ripping outside
+-> GO BACK
+[adb, shell, input, keyevent, 4]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GO BACK ; PARAMETERS[adb, shell, input, keyevent, 4]
+
+-> GETTING CURRENT FOCUS
+[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GETTING CURRENT FOCUS ; PARAMETERS[adb, shell, dumpsys, window, |, grep, -E, 'mCurrentFocus']
+
+com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity
+
+true
+Execution closed the app
+-> CHEKING DEVICE DIMENSIONS
+[adb, shell, wm, size]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING DEVICE DIMENSIONS ; PARAMETERS[adb, shell, wm, size]
+
+-> CHECKING ANDROID VERSION
+[adb, shell, getprop, ro.build.version.release]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHECKING ANDROID VERSION ; PARAMETERS[adb, shell, getprop, ro.build.version.release]
+
+-> GET DEVICE RESOLUTION
+[adb, shell, wm, density]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GET DEVICE RESOLUTION ; PARAMETERS[adb, shell, wm, density]
+
+480
+-> GET CURRENT ORIENTATION
+[adb, shell, dumpsys, input, |, grep, 'SurfaceOrientation']
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: GET CURRENT ORIENTATION ; PARAMETERS[adb, shell, dumpsys, input, |, grep, 'SurfaceOrientation']
+
+For input string: " 0
+"
+-> CHEKING DEVICE DIMENSIONS
+[adb, shell, wm, size]
+
+- - - - - - - - - - - - - - - - - - -
+COMMAND: CHEKING DEVICE DIMENSIONS ; PARAMETERS[adb, shell, wm, size]
+
+EXPLORATION FINISHED, 9 states discovered, 63 events executed, in 3 minutes

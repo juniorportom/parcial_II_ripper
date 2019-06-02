@@ -1,0 +1,2 @@
+ERROR CHECKING ANDROID VERSIONCOMMAND:CHECKING ANDROID VERSION; PARAMETERS[adb, shell, getprop, ro.build.version.release]
+ERROR INSTALLING APKCOMMAND:INSTALLING APK; PARAMETERS[adb, install, -r, ./apk/parcial2/com.evancharlton.mileage-mutant117/com.evancharlton.mileage_3110-aligned-debugSigned.apk]
