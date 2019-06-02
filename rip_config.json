@@ -1,4 +1,4 @@
-{ "apkPath": "./apk/parcial2/com.evancharlton.mileage-mutant2581/com.evancharlton.mileage_3110-aligned-debugSigned.apk","outputFolder": "./output_mutante_2581/",
+{ "apkPath": "./apk/parcial2/com.evancharlton.mileage-mutant2826/com.evancharlton.mileage_3110-aligned-debugSigned.apk","outputFolder": "./output_mutante_2826/",
     "isHybrid": false,
     "executionMode": "events",
     "scriptPath": "./output_base/result.json",
